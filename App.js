@@ -8,11 +8,6 @@ import Recent from './Recent_Comp'
 import Recent_Comp from './Recent_Comp';
 
 export default function App() {
-  const [name, setName] = useState('Fahad N ');
-  const [email, setEmail] = useState('fkhan@gmail.com');
-  const [password, setPassword] = useState('');
-  const [age, setAge] = useState('21');
-
 
   return (
       <View style={styles.container}>
@@ -21,6 +16,7 @@ export default function App() {
     
         <Nav />
         <Recent_Comp />
+        <AudioBook />
         </ScrollView>
       </View>
 );

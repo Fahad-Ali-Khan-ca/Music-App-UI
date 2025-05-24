@@ -26,152 +26,199 @@ const Recent_Comp = () => {
 
 return(
     <View>
-    <View style={styles.grid}>
-        <View style={styles.section}>
+        <View style={styles.grid}>
+            <View style={styles.section}>
 
-            <TouchableOpacity style= {styles.content} >
-               <Image
-                source={hot}
-                style={
-                    { width: 60, height: 60 }}
-               />
-                <Text style={styles.text} > Hot Hits {"\n"} Canada </Text>
-            </TouchableOpacity>
+                <TouchableOpacity style= {styles.content} >
+                <Image
+                    source={hot}
+                    style={
+                        { width: 60, height: 60 }}
+                />
+                    <Text style={styles.text} > Hot Hits {"\n"} Canada </Text>
+                </TouchableOpacity>
 
-            <TouchableOpacity style= {styles.content} >
-               <Image
-                source={hip_hop}
-                style={
-                    { width: 60, height: 60 }}
-               />
-                <Text  style = {styles.text}> Hip-Hop {"\n"} Central </Text>
-            </TouchableOpacity>
+                <TouchableOpacity style= {styles.content} >
+                <Image
+                    source={hip_hop}
+                    style={
+                        { width: 60, height: 60 }}
+                />
+                    <Text  style = {styles.text}> Hip-Hop {"\n"} Central </Text>
+                </TouchableOpacity>
 
-            <TouchableOpacity style= {styles.content} >
-               <Image
-                source={country}
-                style={
-                    { width: 60, height: 60 }}
-               />
-                <Text style= {styles.text} > All About {"\n"} Country </Text>
-            </TouchableOpacity >
+                <TouchableOpacity style= {styles.content} >
+                <Image
+                    source={country}
+                    style={
+                        { width: 60, height: 60 }}
+                />
+                    <Text style= {styles.text} > All About {"\n"} Country </Text>
+                </TouchableOpacity >
 
-            <TouchableOpacity style= {styles.content} >
-               <Image
-                source={wellness}
-                style={
-                    { width: 60, height: 60 }}
-               />
-                <Text style= {styles.text} > Daily {"\n"} Wellness </Text>
-            </TouchableOpacity>
+                <TouchableOpacity style= {styles.content} >
+                <Image
+                    source={wellness}
+                    style={
+                        { width: 60, height: 60 }}
+                />
+                    <Text style= {styles.text} > Daily {"\n"} Wellness </Text>
+                </TouchableOpacity>
+
+            </View>
+
+            <View style={styles.section}>
+
+                <TouchableOpacity style= {styles.content}>
+                <Image
+                    source={pop}
+                    style={
+                        { width: 60, height: 60 }}
+                />
+                    <Text style= {styles.text} > Pop {"\n"} Favourites </Text>
+                </TouchableOpacity >
+
+                <TouchableOpacity style= {styles.content}>
+                <Image
+                    source={rock}
+                    style={
+                        { width: 60, height: 60 }}
+                />
+                    <Text style= {styles.text} > 80s {"\n"} Hard Rock </Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style= {styles.content} >
+                <Image
+                    source={upbeat}
+                    style={
+                        { width: 60, height: 60 }}
+                />
+                    <Text style= {styles.text} > Upbeat {"\n"} mix</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style= {styles.content}>
+                <Image
+                    source={release}
+                    style={
+                        { width: 60, height: 60 }}
+                />
+                    <Text style= {styles.text} > Release {"\n"} Radar </Text>
+                </TouchableOpacity>
+
+            </View>
 
         </View>
 
-        <View style={styles.section}>
+    {/* Recents Section  */}
+        <View style={styles.second_grid}>
+            <Text style={{fontSize:30, color:"white"}}> Recents </Text>
+            {/* First Row  */}
+            {/* Better approach would be to make a function and pass the req text+img as arg but I'm not sure if you've allowed that */}
+            <View style={styles.rows}>
+                <View style={styles.image_view}>
+                    <ImageBackground 
+                        source={pop} 
+                        style={styles.image}
+                        >
+                        <View style={styles.image_overlay}>
+                            <Text style={styles.image_text}>Pop mix</Text>
+                        </View>
+                    </ImageBackground>
+                    <View style={styles.bottom_text_view}>
+                        <Text style={styles.bottom_text}> Playlist</Text>
+                        <Text style={styles.bottom_text}> User 1</Text>
+                    </View>
 
-            <TouchableOpacity style= {styles.content}>
-               <Image
-                source={pop}
-                style={
-                    { width: 60, height: 60 }}
-               />
-                <Text style= {styles.text} > Pop {"\n"} Favourites </Text>
-            </TouchableOpacity >
+                </View>
 
-            <TouchableOpacity style= {styles.content}>
-               <Image
-                source={rock}
-                style={
-                    { width: 60, height: 60 }}
-               />
-                <Text style= {styles.text} > 80s {"\n"} Hard Rock </Text>
-            </TouchableOpacity>
 
-            <TouchableOpacity style= {styles.content} >
-               <Image
-                source={upbeat}
-                style={
-                    { width: 60, height: 60 }}
-               />
-                <Text style= {styles.text} > Upbeat {"\n"} mix</Text>
-            </TouchableOpacity>
+                <View style={styles.image_view}>
+                    <ImageBackground 
+                        source={hot} 
+                        style={styles.image}
+                        >
+                        <View style={styles.image_overlay}>
+                            <Text style={styles.image_text}>Hot hits</Text>
+                        </View>
+                    </ImageBackground>
+                    <View style={styles.bottom_text_view}>
+                        <Text style={styles.bottom_text}> Playlist</Text>
+                        <Text style={styles.bottom_text}> User 1</Text>
+                    </View>
 
-            <TouchableOpacity style= {styles.content}>
-               <Image
-                source={release}
-                style={
-                    { width: 60, height: 60 }}
-               />
-                <Text style= {styles.text} > Release {"\n"} Radar </Text>
-            </TouchableOpacity>
+                </View>
 
-        </View>
+                <View style={styles.image_view}>
+                    <ImageBackground 
+                        source={upbeat} 
+                        style={styles.image}
+                        >
+                        <View style={styles.image_overlay}>
+                            <Text style={styles.image_text}>Upbeat Mix</Text>
+                        </View>
+                    </ImageBackground>
+                    <View style={styles.bottom_text_view}>
+                        <Text style={styles.bottom_text}> Playlist</Text>
+                        <Text style={styles.bottom_text}> User 1</Text>
+                    </View>
 
+                </View>
+                
+            </View>
+            {/* Second Row  */}
+            <View style={styles.rows}>
+                <View style={styles.image_view}>
+                    <ImageBackground 
+                        source={wellness} 
+                        style={styles.image}
+                        >
+                        <View style={styles.image_overlay}>
+                            {/* Not sure I'm allowed to use numberOfLines ellipsizeMode this but It would work fine without it even 
+                            Just added for my clarity */}
+                            <Text style={styles.image_text} numberOfLines={1} ellipsizeMode="tail">Daily Well...</Text>
+                        </View>
+                    </ImageBackground>
+                    <View style={styles.bottom_text_view}>
+                        <Text style={styles.bottom_text}> Playlist</Text>
+                        <Text style={styles.bottom_text}> User 1</Text>
+                    </View>
+
+                </View>
+
+                <View style={styles.image_view}>
+                    <ImageBackground 
+                        source={hip_hop} 
+                        style={styles.image}
+                        >
+                        <View style={styles.image_overlay}>
+                            <Text style={styles.image_text} numberOfLines={1} ellipsizeMode="tail" >Hip-Hop Central</Text>
+                        </View>
+                    </ImageBackground>
+                    <View style={styles.bottom_text_view}>
+                        <Text style={styles.bottom_text}> Playlist</Text>
+                        <Text style={styles.bottom_text}> User 1</Text>
+                    </View>
+
+                </View>
+
+                <View style={styles.image_view}>
+                    <ImageBackground 
+                        source={rock} 
+                        style={styles.image}
+                        >
+                        <View style={styles.image_overlay}>
+                            <Text style={styles.image_text} numberOfLines={1} ellipsizeMode="tail" >80s Hard Rock</Text>
+                        </View>
+                    </ImageBackground>
+                    <View style={styles.bottom_text_view}>
+                        <Text style={styles.bottom_text}> Playlist</Text>
+                        <Text style={styles.bottom_text}> User 1</Text>
+                    </View>
+
+                </View>
+            </View>
     </View>
 
-   {/* Recents Section  */}
-    <View style={styles.second_grid}>
-        <Text style={{fontSize:30, color:"white"}}> Recents </Text>
-        {/* First Row  */}
-        <View style={styles.rows}>
-            <ImageBackground 
-            source={pop} 
-            style={styles.image}
-            >
-            <View style={styles.image_overlay}>
-                <Text style={styles.image_text}>Pop mix</Text>
-            </View>
-            </ImageBackground>
-
-            <ImageBackground 
-            source={hot} 
-            style={styles.image}
-            >
-            <View style={styles.image_overlay}>
-                <Text style={styles.image_text}>Hot Hits</Text>
-            </View>
-            </ImageBackground>
-
-            <ImageBackground 
-            source={upbeat} 
-            style={styles.image}
-            >
-            <View style={styles.text}>
-                <Text style={styles.text}>Welcome to My App</Text>
-            </View>
-            </ImageBackground>
-            
-        </View>
-        {/* Second Row  */}
-        <View style={styles.rows}>
-            <ImageBackground 
-                source={wellness} 
-                style={styles.image}
-            >
-            <View style={styles.text}>
-                <Text style={styles.text}>Welcome to My App</Text>
-            </View>
-            </ImageBackground>
-
-            <ImageBackground 
-            source={hip_hop} 
-            style={styles.image}
-            >
-            <View style={styles.text}>
-                <Text style={styles.text}>Welcome to My App</Text>
-            </View>
-            </ImageBackground>
-
-            <ImageBackground 
-            source={rock} 
-            style={styles.image}
-            >
-            <View style={styles.text}>
-                <Text style={styles.text}>Welcome to My App</Text>
-            </View>
-            </ImageBackground>
-        </View>
-    </View>
     </View>
 
 );
@@ -219,19 +266,35 @@ const styles = StyleSheet.create({
     width:120,
     height: 160,
     borderRadius: 5,
-    margin:5
+
+ },
+ image_view: {
+    width:120,
+    margin: 5
+    
  },
  image_overlay: {
-    backgroundColor: '#4b6b83', 
-    opacity: 0.7,
+    backgroundColor: 'rgba(75, 107, 131, 0.5)',  
     padding: 10,
-    borderRadius: 5,
-    color: '#ffffff'
+    color: '#ffffff',
  },
  image_text:{
-    color:'black',
-    fontSize: 20,
+    color:'white',
+    fontSize: 18,
     fontWeight: 'bold'
+ },
+ bottom_text_view:{
+   width:'100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    backgroundColor: '#464646',
+    borderRadius:2
+    
+ },
+ bottom_text: {
+    color:'white',
+    fontSize:15,
+   
  }
 });
 
