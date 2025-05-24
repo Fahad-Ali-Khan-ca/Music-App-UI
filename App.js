@@ -1,20 +1,37 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {StatusBar} from 'expo-status-bar';
+import {useState} from 'react';
+import {Alert, Button, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native';
+
+import AudioBook from './AudioBook_Comp'
+import Nav from './navbar';
+import Recent from './Recent_Comp'
+import Recent_Comp from './Recent_Comp';
 
 export default function App() {
+  const [name, setName] = useState('Fahad N ');
+  const [email, setEmail] = useState('fkhan@gmail.com');
+  const [password, setPassword] = useState('');
+  const [age, setAge] = useState('21');
+
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+      <View style={styles.container}>
+            <StatusBar style = 'auto' />
+        <ScrollView style={styles.content} stickyHeaderIndices = {[0]}>
+    
+        <Nav />
+        <Recent_Comp />
+        </ScrollView>
+      </View>
+);
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: 'black',
   },
+  content: {
+    marginTop: 40
+  }
 });
